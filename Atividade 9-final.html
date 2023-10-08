@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+    <script>
+
+
+let alturas = []
+let sexos = []
+
+
+while(true){
+ let altu = parseFloat(prompt("Digite a altura em metros da pessoa (ou digite 0 para finalizar)"))
+ 
+
+ if(altu === 0){
+
+    break
+ }
+
+ let sex = prompt("Digite o sexo, M para Masculino e F para Feminino.")
+
+ if( sex === "M" || sex === "F"){
+    alturas.push(altu)
+    sexos.push(sex)
+
+ }else{
+    alert("Sexo inválido, digite apenas M ou F.")
+ }
+}
+
+let maiorAltura = Math.max(...alturas)
+console.log(maiorAltura)
+
+let qtdAlturaMulheres = 0
+let somaAltura = 0
+
+for(let i=0; i < alturas.length; i++){
+
+    if(sexos[i] === "F"){
+     qtdAlturaMulheres++
+     somaAltura += alturas[i]
+     
+    }
+
+}
+
+let mediaAlturaMulheres = somaAltura / qtdAlturaMulheres
+
+let qtdHomens = sexos.length - qtdAlturaMulheres
+console.log(qtdHomens)
+
+let menorAlturaHomens = Number.POSITIVE_INFINITY
+
+for(let i=0; i<alturas.length; i++){  
+
+    if(sexos[i] === "M" && alturas[i] < menorAlturaHomens){
+        menorAlturaHomens = alturas[i]
+    }
+}
+
+alert("A maior altura informada é: "+maiorAltura+ " metros")
+alert("A média das altuas das mulheres é: "+mediaAlturaMulheres+" metros")
+alert("A quantidade de homens informados é: "+qtdHomens)
+alert("A menor altura dos homens é: "+menorAlturaHomens+" metros")
+
+
+
+//         Escrever um algoritmo que lê uma quantidade não informada de dados de pessoas
+// que estão sendo monitoradas no posto de saúde. Para cada pessoa é anotada o sexo
+// (M ou F) e a altura (em metros), que é fornecida via teclado, sendo que a altura igual
+// a zero informa o final da leitura. Armazenar as informações em vetores e
+// posteriormente, calcule e escreva:
+// a. A maior altura informada,
+// b. A média das alturas das mulheres,
+// c. A quantidade de homens,
+// d. A menor altura dos homens
+
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+    <script>
+//         Escrever um algoritmo que lê cinco números inteiros, um de cada vez, armazena os
+// números lidos em um vetor e a partir da leitura do vetor imprime qual é o maior e o
+// menor dos números lidos e também a soma dos números lidos
+
+let numeros = []
+
+for(let i=0; i < 5; i++){
+    let numero = +prompt("Digite um numero")
+
+    numeros.push(numero)
+}
+
+let maiorNumero = numeros[0]
+let menorNumero = numeros[0]
+let somaNumeros = 0
+
+for(let i=0; i<numeros.length; i++){
+    somaNumeros += numeros[i]
+
+    if(numeros[i] > maiorNumero){
+        maiorNumero = numeros[i]
+    }
+
+    if(numeros[i] < menorNumero){
+        menorNumero = numeros[i]
+    }
+}
+
+alert("O maior número é: "+maiorNumero)
+alert("O menor número é: "+menorNumero)
+alert("A soma dos numeros é: "+somaNumeros)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

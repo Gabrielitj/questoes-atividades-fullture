@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <script>
+//        Calcular e escrever a quantidade média ((quantidade média = quantidade
+// máxima + quantidade mínima)/2). Se a quantidade em estoque for maior ou igual a
+// quantidade média exibir a mensagem 'Não efetuar compra', senão escrever a
+// mensagem 'Efetuar compra'.
+
+let quantidadeAtual = +prompt("Digite a quantidade atual do produto X")
+let quantidadeMinima = +prompt("Digite qual a quantidade para estoque mínimo")
+let quantidadeMaxima = +prompt("Digite a quantidade máxima do estoque")
+
+let quantidadeMedia = (quantidadeMaxima + quantidadeMinima)/2
+alert("Estoque medio é :" +quantidadeMedia)
+
+if(quantidadeAtual >= quantidadeMedia){
+    alert("Não efetuar compra")
+}
+else{
+    alert("Efetuar compra")
+}
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

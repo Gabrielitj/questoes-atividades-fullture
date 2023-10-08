@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <script>
+       let valorDoVeiculo = +prompt("Qual o valor dos veiculos vendidos?")
+       let quantidadeDeVeiculos = +prompt("Quantos veiculos foram vendidos vendidos?")
+       let salarioFixo = +prompt("Qual é o seu salario mensal?")
+       const porcentagem = 5
+       let salarioFinal = 0
+       let valorTotalDaComissao = 0
+       
+
+       let comissao = (valorDoVeiculo * porcentagem) / 100
+       alert("Sua comissão por veiculo é de: " + comissao)
+
+       valorTotalDaComissao = comissao * quantidadeDeVeiculos
+       alert("O valor agregado da sua comissão soma: "+ valorTotalDaComissao)
+
+       salarioFinal = salarioFixo + valorTotalDaComissao
+       alert("Seu salario fixo de "+salarioFixo+" junto as comissões somam: "+salarioFinal ) 
+
+       
+       
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

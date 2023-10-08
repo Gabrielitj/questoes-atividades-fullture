@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    <script>
+        let custoDeFabrica = +prompt("Qual é o custo de fabrica?")
+        const porcentagemDistribuidor = 28
+        const porcentagemImposto = 45
+        let valorDistribuidor = 0
+        let valorImposto = 0
+        let valorParaConsumidor = 0
+
+        valorDistribuidor = (custoDeFabrica * porcentagemDistribuidor) / 100
+        alert("O valor dos distribuidor é: " + valorDistribuidor)
+        valorImposto = (custoDeFabrica * porcentagemImposto) / 100
+        alert("O valor dos impostos são de: " + valorImposto)
+        valorParaConsumidor = (custoDeFabrica + valorDistribuidor + valorImposto)
+        alert("O valor final para consumidor é de: " + valorParaConsumidor)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

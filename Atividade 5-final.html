@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+    <script>
+//         A Secretaria de Meio Ambiente que controla o índice de poluição mantém 3 grupos de
+// indústrias que são altamente poluentes do meio ambiente. O índice de poluição
+// aceitável varia de 0,05 até 0,25. Se o índice sobe para 0,3 as indústrias do 1º grupo
+// são intimadas a suspenderem suas atividades, se o índice crescer para 0,4 as
+// industrias do 1º e 2º grupo são intimadas a suspenderem suas atividades, se o índice
+// atingir 0,5 todos os grupos devem ser notificados a paralisarem suas atividades.
+// Escreva um algoritmo que solicite ao usuário que informe o índice de poluição medido
+// e emita a notificação adequada aos diferentes grupos de empresas.
+
+let indPoluicao = +prompt("Digite o índice atual de poluição, por gentileza apenas números.")
+
+if(indPoluicao  < 0.25){
+    alert("Nenhuma empresa precisa suspender as operações!")
+}
+else if(indPoluicao < 0.40){
+    alert("Empresas do 1º Grupo, suspender as ativiades!")
+}else if(indPoluicao < 0.50){
+    alert("Empresas do 1º e 2º Grupo, suspender as atividade!")
+}else{
+    alert("Todos os grupos suspender atividades!!!")
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

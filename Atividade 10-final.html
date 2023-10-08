@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Atividade 10</title>
+    <script>
+//          Escrever um algoritmo que lê uma quantidade informada inicialmente de notas de
+// alunos da disciplina de Lógica. Para cada aluno são lidas quatro (4) notas variando de
+// zero (0) a dez (10). Para ser aprovado o aluno necessita de média igual ou superior a
+// seis (6). Ler as notas, calcular a média e armazenar em uma matriz (Vetor
+// bidimensional). Considere o índice da linha da matriz como o número do aluno na
+// 3
+// chamada. Após o cálculo da média, ler os dados e escrever: “O Aluno y foi Aprovado
+// (ou Reprovado) com média x,xx”. No final informar:
+// a. quantos alunos foram aprovados,
+// b. quantos alunos foram reprovados,
+// c. qual a porcentagem de alunos aprovados
+
+const numAlunos = +prompt("Digite o número de alunos:");
+
+
+let notas = []
+
+
+let aprovados = 0
+let reprovados = 0
+
+for (let i = 0; i < numAlunos; i++) {
+  const aluno = []
+
+  for (let j = 0; j < 4; j++) {
+    const nota = +prompt("Digite a nota "+j+ " do aluno "+ i)
+
+    if (nota < 0 || nota > 10) {
+      alert("Nota inválida. As notas devem estar entre 0 e 10.")
+      j--
+    } else {
+      aluno.push(nota)
+    }
+  }
+
+  notas.push(aluno) 
+
+  
+  const media = aluno.reduce((acc, nota) => acc + nota, 0) / 4
+
+  
+  if (media >= 6) {
+    alert(" O Aluno "+ i + " foi Aprovado com média " + media.toFixed(2))
+    aprovados++
+  } else {
+    alert("O Aluno "+ i + " foi Reprovado com média "+media.toFixed(2))
+    reprovados++
+  }
+}
+
+const porcentagemAprovados = (aprovados / numAlunos) * 100
+
+
+alert("Total de alunos aprovados: "+aprovados)
+alert("Total de alunos reprovados: "+reprovados)
+alert("Porcentagem de alunos aprovados: "+porcentagemAprovados.toFixed(2))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

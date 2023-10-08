@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <script>
+//         Escreva um algoritmo que permita que o professor digite as notas da 1a. e 2a.
+// avaliações de vários alunos, um aluno de cada vez. calcule e imprima a média
+// (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10)
+// para cada nota. Após apresentar a media calculada, o algoritmo deverá perguntar se
+// o professor deseja continuar calculando a media para outros alunos. Se a resposta for
+// ‘SIM’, o algoritmo continua, caso contrário, o algoritmo finaliza.
+let quantidadeDeAlunos = +prompt("Quantos alunos foram avaliados?")
+let media = 0
+let simloop = "sim"
+let continuarLoop = true
+
+while (continuarLoop) {
+    
+    let notaA = +prompt("Digite a primeira nota de (0 a 10)")
+    console.log("Primeira nota: " +notaA)
+    let notaB= +prompt("Digite a segunda nota de (0 a 10)")
+    console.log("Segunda nota: " +notaB)
+
+    media = (notaA+notaB)/2
+    alert("A média do aluno é: " + media)
+    console.log("a media do aluno é: "+media)
+
+
+
+
+    let pauseloop = prompt("Digite 'sim' para continuar ou 'não' para parar.").toLowerCase()
+
+    if (pauseloop === simloop) {
+        continuarLoop = false
+        console.log("pausa loop")
+    } else {
+        console.log("continuar loop")
+    }
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
